@@ -15,7 +15,8 @@ $this->title = 'Payment';
     }
 
 </style>
-<h1 style="text-align: center;margin-top: -2vw">Overview</h1>
+<h1 class="prog_overview" style="text-align: center;margin-top: -2vw;border-bottom: 3px solid teal;padding: 0 0 1% 0;margin-left: 1.5%;margin-right: 1.5%">
+    Overview</h1>
 
 <div class="main-content">
     <div class="container">
@@ -24,20 +25,21 @@ $this->title = 'Payment';
 
                 <?php /** @var Counter $counters */
                 foreach ($counters as $counter): ?>
-                    <article class="post">
-                        <div class="post-content" >
+                    <article class="post" style="border: 2px solid teal">
+                        <div class="post-content">
                             <header class="entry-header text-center text-uppercase">
-                                <h2 style="text-align: left;"><?= $counter->job->title; ?></h2>
-                                <hr>
-                                <p style="text-align: left;font-weight: bold;font-family: 'Noto Sans JP', sans-serif;font-size: 140%"><?= $counter->price . ' ' . 'rubles' ?></p>
-                                <div id="settings" style="text-align: left;width: 60%">
-                                        <?= $counter->job->description ?>
+                                <h2 style="text-align: left;" class="prog_title"><?= $counter->job->title; ?></h2>
+                                <hr style="background-color: teal;height: 0.5px">
+
+                                <p style="text-align: left;font-weight: bold;font-family: 'Noto Sans JP', sans-serif;" class="prog_price"><?= $counter->price ?>
+                                    <i class="fas fa-ruble" style="font-size: 80%"></i></p>
+                                <div id="settings" style="text-align: left;" class="prog_desc">
+                                    <?= $counter->job->description ?>
                                 </div>
-                                <p style="text-align: right;color: grey; font-size: 120%"><?= $counter->getDate() ?></p>
+                                <p style="text-align: right;color: grey;" class="prog_date"><?= $counter->getDate() ?></p>
                             </header>
                         </div>
                     </article>
-
 
 
                 <?php endforeach ?>
@@ -59,3 +61,6 @@ $this->title = 'Payment';
                 'boughts' => $boughts,
                 'paids' => $paids
             ]); ?>
+        </div>
+    </div>
+</div>

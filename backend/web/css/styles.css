@@ -1,0 +1,151 @@
+ul.dropdown {
+    padding: 0;
+    list-style: none;
+}
+
+.li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: center;
+    width: 110%;
+    margin-left: 525%;
+}
+
+.li a {
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+.li a {
+    color: #fff;
+}
+
+
+ul li ul.dropdown {
+    width: 10%; /* Set width of the dropdown */
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+ul li:hover ul.dropdown {
+    display: block; /* Display the dropdown */
+}
+
+ul .li ul.dropdown li {
+    display: block;
+}
+
+@media screen and (min-width: 1255px) and (max-width: 1600px) {
+    .log-navbar {
+        margin-left: 60vw;
+    }
+
+    .logo {
+        margin-left: 5vw;
+    }
+
+    .logout {
+        margin-left: 600%;
+    }
+
+    .menu {
+        margin-left: 5%;
+    }
+}
+
+.menu {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1255px) {
+
+    .logout {
+        margin-left: 400%;
+    }
+
+    .log-navbar {
+        margin-left: 52vw;
+    }
+
+    .logo {
+        margin-left: 3vw;
+    }
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: lightgrey;
+    transition: 1s;
+}
+
+.div1 {
+    font-size: 26px;
+    margin-right: 2vw;
+}
+
+.div2 {
+    font-size: 14px;
+    margin-left: 1%;
+}
+
+.div3 {
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+.nav-link {
+    width: 120%;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 130%;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 180%;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
