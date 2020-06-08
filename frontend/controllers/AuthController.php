@@ -18,7 +18,7 @@ class AuthController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index');
+            return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index');
         }
         Yii::error($model);
         return $this->render('login', [
@@ -34,7 +34,7 @@ class AuthController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index');
+        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index');
     }
 
 

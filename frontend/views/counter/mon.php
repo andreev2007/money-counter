@@ -15,9 +15,7 @@ $this->title = 'Payment';
     }
 
 </style>
-<h1 class="prog_overview" style="text-align: center;margin-top: -2vw;border-bottom: 3px solid teal;padding: 0 0 1% 0;margin-left: 1.5%;margin-right: 1.5%">
-    Overview</h1>
-
+<h1 class="prog_overview" style="text-align: center;margin-top: -2vw;border-bottom: 3px solid teal;padding: 0 0 1% 0;margin-left: 1.5%;margin-right: 1.5%"><?= Yii::t('app', 'Overview') ?></h1>
 <div class="main-content">
     <div class="container">
         <div class="row">

@@ -1,0 +1,505 @@
+@media screen and (min-width: 1255px) and (max-width: 1600px) {
+    .login-sign {
+        margin-left: 650%;
+    }
+
+    .logo {
+        margin-left: 5vw;
+    }
+
+    .logout {
+        margin-left: 300%;
+    }
+
+    .menu {
+        margin-left: 5%;
+    }
+}
+
+.menu {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px 4px 4px 4px;
+    margin-left: 10%;
+}
+
+.payme {
+    font-size: 120%;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1255px) {
+
+    .logout {
+        margin-left: 300%;
+    }
+
+    .login-sign {
+        margin-left: 500%;
+    }
+
+    .logo {
+        margin-left: 3vw;
+    }
+}
+
+.menu {
+    font-size: 200%;
+}
+
+.payme {
+    font-size: 180%;
+}
+
+.prog_price {
+    font-size: 140%
+}
+
+.prog_overview {
+    font-size: 250%;
+}
+
+.prog_desc {
+    width: 60%;
+}
+
+.prog_title {
+    font-size: 180%;
+}
+
+.prog_date {
+    font-size: 120%;
+}
+
+@media screen and (min-width: 10px) and (max-width: 1000px){
+    .side_last {
+        font-size: 160%;
+    }
+
+    .side_last {
+        font-size: 170%;
+    }
+
+    .logout {
+        margin-left: 250%;
+    }
+
+    .side_money {
+        font-size: 170%;
+    }
+
+    .side_collumns {
+        font-size: 140%;
+    }
+
+    .login-sign {
+        margin-left: 400%;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+
+    .logout {
+        margin-left: 250%;
+    }
+
+    .menu {
+        font-size: 150%;
+        margin-left: 5%;
+    }
+
+    .payme {
+        font-size: 140%;
+    }
+
+    .logo {
+        margin-left: 3vw;
+    }
+
+    .prog_overview {
+        font-size: 200%;
+    }
+
+    .payme {
+        font-size: 170%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 170%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+
+    .side_money {
+        font-size: 170%;
+    }
+
+    .side_collumns {
+        font-size: 130%;
+    }
+
+    .login-sign {
+        margin-left: 300%;
+    }
+
+    .logout {
+        margin-left: 180%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 170%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+    .menu {
+        margin-left: 3%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+
+    .login-sign {
+        margin-left: 250%;
+    }
+
+    .logout {
+        margin-left: 130%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 170%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+    .menu {
+        margin-left: 1%;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+
+    .login-sign {
+        margin-left: 150%;
+    }
+
+    .logout {
+        margin-left: 100%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 170%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+    .menu {
+        margin-left: 1%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 550px) {
+
+    .login-sign {
+        margin-left: 150%;
+    }
+
+    .menu {
+        margin-left: 0;
+        font-size: 130%;
+    }
+
+    .logout {
+        margin-left: 50%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 140%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px) {
+
+    .login-sign {
+        margin-left: 80%;
+    }
+
+    .menu {
+        margin-left: 0;
+        font-size: 120%;
+    }
+
+    .logout {
+        margin-left: 50%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 140%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 350px) {
+
+    .login-sign {
+        margin-left: 20%;
+    }
+
+    .menu {
+        margin-left: 0;
+        font-size: 120%;
+    }
+
+    .logout {
+        margin-left: 15%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 140%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width: 250px) and (max-width: 300px) {
+
+    .login-sign {
+        margin-left: 0%;
+    }
+
+    .menu {
+        margin-left: 0;
+        font-size: 120%;
+    }
+
+    .prog_overview {
+        font-size: 180%;
+    }
+
+    .payme {
+        font-size: 120%;
+    }
+
+    .prog_price {
+        font-size: 120%
+    }
+
+    .prog_desc {
+        width: 100%;
+    }
+
+    .prog_title {
+        font-size: 160%;
+    }
+
+    .prog_date {
+        font-size: 110%;
+        margin-top: 5%;
+    }
+
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: lightgrey;
+    transition: 1s;
+}
+
+.div1 {
+    font-size: 26px;
+    margin-right: 2vw;
+}
+
+.div2 {
+    font-size: 14px;
+    margin-left: 1%;
+}
+
+.div3 {
+    font-size: 18px;
+    margin-left: 2%;
+}
+
+.nav-link {
+    width: 120%;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 130%;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 180%;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

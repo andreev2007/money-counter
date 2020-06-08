@@ -4,6 +4,9 @@ namespace backend\controllers;
 
 use common\models\Category;
 use common\models\ImageUpload;
+use common\models\Investition;
+use common\models\InvestitionSearch;
+use common\models\Type;
 use Yii;
 use common\models\Goal;
 use common\models\GoalSearch;
@@ -17,7 +20,7 @@ use yii\web\UploadedFile;
 /**
  * GoalController implements the CRUD actions for Goal model.
  */
-class GoalController extends Controller
+class InvestitionController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -36,7 +39,7 @@ class GoalController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index','update','delete','create','view','set-category','set-image'],
+                        'actions' => ['index','update','delete','create','view','set-type'],
                         'allow' => true,
                         'roles' => ['admin']
                     ],
@@ -52,7 +55,7 @@ class GoalController extends Controller
     public function actionIndex()
     {
         $this->layout = "admin";
-        $searchModel = new GoalSearch();
+        $searchModel = new InvestitionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -82,7 +85,7 @@ class GoalController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Goal();
+        $model = new Investition();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -129,56 +132,40 @@ class GoalController extends Controller
         return $this->redirect(['index']);
     }
 
+
+    public function actionSetType($id){
+        $investition = $this->findModel($id);
+        $selectedType = $investition->type_id;
+        $types = ArrayHelper::map(Type::find()->all() , 'id', 'name');
+
+        if (Yii::$app->request->isPost){
+            $type = Yii::$app->request->post('type');
+            $investition->saveType($type);
+            return $this->redirect(['view', 'id' => $investition->id]);
+        }
+
+        return $this->render('type', [
+            'investition' => $investition,
+            'selectedType' => $selectedType,
+            'types' => $types
+        ]);
+    }
     /**
      * Finds the Goal model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Goal the loaded model
+     * @return Investition the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
         $this->layout = "admin";
-        if (($model = Goal::findOne($id)) !== null) {
+        if (($model = Investition::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-    public function actionSetImage($id) {
-        $model = new ImageUpload;
-
-        if (Yii::$app->request->isPost)
-        {
-            $goal = $this->findModel($id);
-            $file = UploadedFile::getInstance($model, 'image');
-
-            if($goal->saveImage($model->uploadFile($file, $goal->image)))
-            {
-                return $this->redirect(['view', 'id'=>$goal->id]);
-            }
-        }
-
-        return $this->render('image', ['model' => $model]);
-    }
-
-    public function actionSetCategory($id){
-        $goal = $this->findModel($id);
-        $selectedCategory = $goal->category->id;
-        $categories = ArrayHelper::map(Category::find()->all() , 'id', 'title');
-
-        if (Yii::$app->request->isPost){
-            $category = Yii::$app->request->post('category');
-            $goal->saveCategory($category);
-            return $this->redirect(['view', 'id' => $goal->id]);
-        }
-
-        return $this->render('category', [
-            'goal' => $goal,
-            'selectedCategory' => $selectedCategory,
-            'categories' => $categories
-        ]);
-    }
 
 }

@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\InvestitionType */
+/* @var $model common\models\Type */
 
 $this->title = 'Update Investitions Type: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Investitions Types', 'url' => ['index']];

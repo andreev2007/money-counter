@@ -74,7 +74,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index');
+        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index');
 
     }
 
@@ -110,7 +110,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index');
+        return $this->redirect(Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index');
     }
 
     /**

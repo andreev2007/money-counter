@@ -36,7 +36,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Overview', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index'],
+        ['label' => 'Overview', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/mon'],
         ['label' => 'Home', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/backend/web/index.php/site/index'],
         ['label' => 'Bought', 'url' => ['/bought/index']],
         ['label' => 'Paid', 'url' => ['/paid/index']],
@@ -44,6 +44,8 @@ AppAsset::register($this);
         ['label' => 'Goal', 'url' => ['/goal/index']],
         ['label' => 'Counter', 'url' => ['/counter/index']],
         ['label' => 'Jobs', 'url' => ['/job/index']],
+        ['label' => 'Investitions', 'url' => ['/investition/index']],
+        ['label' => 'Investitions Type', 'url' => ['/type/index']],
     ];
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

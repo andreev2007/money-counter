@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Type;
 use common\models\TypeSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,7 +13,7 @@ use yii\filters\VerbFilter;
 /**
  * InvestitionsTypeController implements the CRUD actions for Type model.
  */
-class InvestitionsTypeController extends Controller
+class TypeController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -25,6 +26,16 @@ class InvestitionsTypeController extends Controller
                 'actions' => [
                     'delete' => ['POST'],
                 ],
+               
+            ], 'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index','update','delete','create','view','set-type'],
+                        'allow' => true,
+                        'roles' => ['admin']
+                    ],
+                ]
             ],
         ];
     }

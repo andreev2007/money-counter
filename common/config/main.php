@@ -5,6 +5,9 @@ return [
         '@npm'   => '@vendor/npm-asset',
         '@app' => '@common/'
     ],
+    'bootstrap' => [
+        'languageSwitcher',
+    ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
@@ -13,6 +16,9 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\dbManager',
             'cache' => 'cache',
-        ]
+        ],
+        'languageSwitcher' => [
+            'class' => 'common\components\languageSwitcher',
+        ],
     ],
 ];

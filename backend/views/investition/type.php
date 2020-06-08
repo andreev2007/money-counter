@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= Html::dropDownList('investition', $selectedInvestitionType, $investition_types, ['class' => 'form-control']);
+    <?= Html::dropDownList('type', $selectedType, $types, ['class' => 'form-control']);
     ?>
 
     <div class="form-group">

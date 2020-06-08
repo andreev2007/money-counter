@@ -8,8 +8,10 @@ use common\models\Goal;
 
 /**
  * GoalSearch represents the model behind the search form of `common\models\Goal`.
+ * @property mixed investition_type_id
+ * @property mixed name
  */
-class GoalSearch extends Goal
+class InvestitionSearch extends Investition
 {
     /**
      * {@inheritdoc}
@@ -17,8 +19,8 @@ class GoalSearch extends Goal
     public function rules()
     {
         return [
-            [['id', 'category_id', 'is_done'], 'integer'],
-            [['title', 'image', 'date'], 'safe'],
+            [['id', 'type_id', 'bought', 'sold', 'price'], 'integer'],
+            [['name', 'date'], 'safe'],
         ];
     }
 
@@ -40,7 +42,7 @@ class GoalSearch extends Goal
      */
     public function search($params)
     {
-        $query = Goal::find();
+        $query = Investition::find();
 
         // add conditions that should always apply here
 
@@ -59,13 +61,12 @@ class GoalSearch extends Goal
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'category_id' => $this->category_id,
+            'type_id' => $this->type_id,
             'date' => $this->date,
-            'is_done' => $this->is_done,
+            'name' => $this->name,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'image', $this->image]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

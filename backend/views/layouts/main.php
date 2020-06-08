@@ -36,7 +36,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index'],
+        ['label' => 'Home', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index'],
     ];
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

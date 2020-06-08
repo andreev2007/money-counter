@@ -4,12 +4,12 @@ namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\InvestitionType;
+use common\models\Type;
 
 /**
- * InvestitionTypeSearch represents the model behind the search form of `common\models\InvestitionType`.
+ * TypeSearch represents the model behind the search form of `common\models\Type`.
  */
-class InvestitionTypeSearch extends InvestitionType
+class TypeSearch extends Type
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class InvestitionTypeSearch extends InvestitionType
      */
     public function search($params)
     {
-        $query = InvestitionType::find();
+        $query = Type::find();
 
         // add conditions that should always apply here
 

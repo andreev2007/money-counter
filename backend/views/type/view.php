@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\InvestitionType */
+/* @var $model common\models\Type */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Investitions Types', 'url' => ['index']];
@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'investition_id',
+
         ],
     ]) ?>
 

@@ -36,13 +36,13 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/index'],
-        ['label' => 'Add counter', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/backend/web/index.php/counter/index'],
-        ['label' => 'Spends', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/counter/spend'],
+        ['label' => 'Home', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/index'],
+        ['label' => 'Add counter', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/backend/web/mon.php/counter/index'],
+        ['label' => 'Spends', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/counter/spend'],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/auth/login'];
-        $menuItems[] = ['label' => 'Login', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/index.php/auth/signup'];
+        $menuItems[] = ['label' => 'Signup', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/auth/login'];
+        $menuItems[] = ['label' => 'Login', 'url' => Yii::$app->request->hostInfo.'/projects/mon_con/frontend/web/mon.php/auth/signup'];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
